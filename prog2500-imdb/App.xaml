@@ -3,6 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:prog2500_imdb"
              StartupUri="MainWindow.xaml">
+    
+    
     <Application.Resources>
+        <!--main window styling-->
+        <Style x:Key="TextBoxSuperTitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="32"></Setter>
+            <Setter Property="Foreground" Value="#1f1c17"></Setter>
+            <Setter Property="FontFamily" Value="Courier New"></Setter>
+        </Style>
+
+        <!--List Styling-->
+        <Style x:Key="BorderStyleList" TargetType="Border">
+            <Setter Property="CornerRadius" Value="1"></Setter>
+            <Setter Property="Background" Value="#ccc3b6"></Setter>
+            <Setter Property="BorderBrush" Value="#708692"></Setter>
+            <Setter Property="BorderThickness" Value="4"></Setter>
+        </Style>
+
+        <!--Title box styling-->
+        <Style x:Key="TextBoxTitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontFamily" Value="Courier New"></Setter>
+        </Style>
+
+        <!--subtext styling-->
+        <Style x:Key="TextBoxSubtxt" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="11"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontFamily" Value="Consolas"></Setter>
+        </Style>
+
+        <!--Border styling-->
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="10"></Setter>
+            <Setter Property="Background" Value="#ccc3b6"></Setter>
+            <Setter Property="BorderBrush" Value="#708692"></Setter>
+            <Setter Property="BorderThickness" Value="4"></Setter>
+        </Style>
+
+        <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+            <Setter Property="Background" Value="Transparent"></Setter>
+        </Style>
+        
+        
+        
+        
+        
+
+        
+
     </Application.Resources>
+    
 </Application>

@@ -19,6 +19,29 @@ namespace prog2500_imdb
         public MainWindow()
         {
             InitializeComponent();
+            mainFrame.NavigationService.Navigate(new Pages.HomePage());
+        }
+
+       
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new Pages.HomePage());
+        }
+
+
+        private void MoviesButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new Pages.MoviePage());
+        }
+
+        private void ActorsButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new Pages.ActorPage()); 
+        }
+
+        private void GenresButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new Pages.GenrePage()); 
         }
     }
 }

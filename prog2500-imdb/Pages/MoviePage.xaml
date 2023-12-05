@@ -8,7 +8,58 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MoviePage">
 
-    <Grid>
-        
-    </Grid>
+
+    <Page.Resources>
+        <CollectionViewSource x:Key="moviesViewSource"/>
+    </Page.Resources>
+    
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="Movies" Style="{StaticResource TextBoxSuperTitle}"></TextBlock>
+
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Search Movie Title: "/>
+            <TextBox x:Name="moviesSearch" Width="300"/>
+            <Button x:Name="moviesSearchBtn" Content="Search" Click="customerOrdersSearchBtn_Click"/>
+        </StackPanel>
+
+        <Border Style="{StaticResource BorderStyleList}">
+            <ListView ItemsSource="{Binding Source={StaticResource moviesViewSource}}"
+                      ScrollViewer.VerticalScrollBarVisibility="Visible"
+                      ScrollViewer.CanContentScroll="True" Width="800" Height="350"
+                      x:Name="moviesListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+
+                            <StackPanel Orientation="Vertical">
+                                
+                                <!--Movie title, genre, average rating, release date-->
+                                
+                            </StackPanel>
+
+                            <Expander Header="View Movie Details:">
+
+                                <ListView ItemsSource="{Binding Invoices}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate DataType="local:Invoices">
+                                            <StackPanel Orientation="Horizontal">
+
+                                            <!--Expanding list: actors name, character they played-->
+
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+
+                            </Expander>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Border>
+
+    </StackPanel>
+    
+    
 </Page>
