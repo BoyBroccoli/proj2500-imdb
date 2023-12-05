@@ -27,6 +27,21 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding actor_index}"/>
                         <TextBlock Text="{Binding actor_count}"/>
+
+                        <Expander Header="Show Movies">
+                            <ListView ItemsSource="{Binding title}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate DataType="local:Title">
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Text="{Binding primaryTitle, StringFormat='&quot;{0}&quot;'}"/>
+                                                <TextBlock Text="{Binding runtimeMinutes, StringFormat=' {0} minutes'}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Expander>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
