@@ -4,5 +4,6 @@
              xmlns:local="clr-namespace:prog2500_imdb"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
     </Application.Resources>
 </Application>

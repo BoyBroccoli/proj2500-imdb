@@ -5,10 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prog2500_imdb.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      Style="{StaticResource Style_Page}"
       Title="ActorPage">
 
-    <Grid>
-        
-    </Grid>
+    <Page.Resources>
+        <CollectionViewSource x:Key="ActorViewSource"/>
+    </Page.Resources>
+    
+    <StackPanel Orientation="Vertical">
+        <!--Search Objects-->
+        <Label/>
+        <TextBox x:Name="Search_Field"/>
+        <Button x:Name="Search_Button">
+            <!--<Image Source="{StaticResource SearchIcon}"/>-->
+        </Button>
+
+        <!--<ListView x:Name="ActorListView" Style="{StaticResource Style_ListView0}">-->
+        <ListView x:Name="ActorListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding actor_index}"/>
+                        <TextBlock Text="{Binding actor_count}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 </Page>
