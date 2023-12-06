@@ -47,10 +47,25 @@
             <Setter Property="Background" Value="Transparent"></Setter>
         </Style>
         
-        
-        
-        
-        
+        <!--Home page styling-->
+        <Style x:Key="homePageText" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Foreground" Value="Blue"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="FontSize" Value="42"></Setter>
+        </Style>
+
+        <Style x:Key="shadowBorder" TargetType="Border">
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="1"></Setter>
+            <Setter Property="Margin" Value="-2"></Setter>
+        </Style>
+
+        <Style x:Key="homeStackPanel" TargetType="StackPanel">
+            <Setter Property="Background" Value="#bdbdbd"></Setter>
+            
+        </Style>
 
         
 

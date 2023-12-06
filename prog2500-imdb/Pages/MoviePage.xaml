@@ -32,19 +32,25 @@
                         <StackPanel Orientation="Horizontal">
 
                             <StackPanel Orientation="Vertical">
-                                
                                 <!--Movie title, genre, average rating, release date-->
-                                
+                                <TextBlock Text="{Binding PrimaryTitle}"/>
+                                <TextBlock Text="{Binding StartYear}"/>
+                                <TextBlock Text="{Binding Rating}"/>
+                                <TextBlock Text="{Binding Genres}"/> 
+
                             </StackPanel>
 
                             <Expander Header="View Movie Details:">
 
-                                <ListView ItemsSource="{Binding Invoices}">
+                                <ListView ItemsSource="{Binding Names}">
                                     <ListView.ItemTemplate>
                                         <DataTemplate DataType="local:Invoices">
                                             <StackPanel Orientation="Horizontal">
 
                                             <!--Expanding list: actors name, character they played-->
+                                                <TextBlock Text="{Binding PrimaryName}"/>
+                                                <TextBlock Text=" - "/>
+                                                <TextBlock Text="{Binding PrimaryProfession}"/>
 
                                             </StackPanel>
                                         </DataTemplate>

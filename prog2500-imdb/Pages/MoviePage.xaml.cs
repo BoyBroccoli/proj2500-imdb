@@ -32,16 +32,28 @@ namespace prog2500_imdb.Pages
 
             moviesViewSource = (CollectionViewSource)FindResource(nameof(moviesViewSource));
             _context.Titles.Load();
-            _context.Ratings.Load();
-
             _context.Names.Load();
             
-
         }
 
         private void customerOrdersSearchBtn_Click(object sender, RoutedEventArgs e)
         {
+            string searchTerm = moviesSearch.Text; 
 
+            if(searchTerm != null)
+            {
+
+                var query = from title in _context.Titles
+                            where title.PrimaryTitle.ToLower().Contains(searchTerm.ToLower())
+                            group title by title.PrimaryTitle.ToUpper().Substring(0, 1) into title_group
+                            select new
+                            {
+                                title_index = title_group.Key,
+                                title = title_group.ToList() 
+                            };
+                moviesListView.ItemsSource = query.ToList(); 
+
+            }
 
 
         }
