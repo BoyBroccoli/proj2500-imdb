@@ -13,6 +13,7 @@
     <None Remove="images\film-slate.png" />
     <None Remove="images\genre.png" />
     <None Remove="images\home.png" />
+    <None Remove="images\search.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +34,9 @@
     <Resource Include="images\film-slate.png" />
     <Resource Include="images\genre.png" />
     <Resource Include="images\home.png" />
+    <Resource Include="images\search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

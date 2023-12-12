@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("prog2500_imdb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18dd7163e8118700b97ac7d4d715c6ee51fab55a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("prog2500_imdb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("prog2500_imdb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

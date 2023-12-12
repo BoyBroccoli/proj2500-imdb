@@ -51,7 +51,7 @@ namespace prog2500_imdb
 
         private void ActorsButton_Click(object sender, RoutedEventArgs e)
         {
-            //mainFrame.NavigationService.Navigate(actorPage);
+            mainFrame.NavigationService.Navigate(actorPage);
         }
 
         private void GenresButton_Click(object sender, RoutedEventArgs e)

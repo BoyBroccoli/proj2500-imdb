@@ -5,10 +5,50 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prog2500_imdb.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="600"
       Title="ActorPage">
 
-    <Grid>
-        
-    </Grid>
+    <Page.Resources>
+        <CollectionViewSource x:Key="ActorViewSource"/>
+    </Page.Resources>
+
+    <StackPanel Orientation="Vertical">
+        <!--Search Objects-->
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Style="{StaticResource pageHeaderStyleMOD}" Text="Actors" />
+            <TextBlock Style="{StaticResource searchHeaderStyleMOD}" Text="Search Actors:"/>
+            <TextBox x:Name="Search_Field" Style="{StaticResource Search_Field}"/>
+            <Button x:Name="Search_Button" Style="{StaticResource Search_Button}" Click="Search_Button_Click">
+                <Image Source="{StaticResource Search_Icon}"/>
+            </Button>
+        </StackPanel>
+
+        <ListView ItemsSource="{Binding ActorViewSource}" x:Name="ActorListView" Style="{StaticResource listViewStyle}" Height="325">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" Width="125">
+                            <TextBlock Text="{Binding actor_index}" Style="{StaticResource Data_Header}"/>
+                            <TextBlock Text="{Binding actor_count, StringFormat=' ({0})'}" Style="{StaticResource Data_Header}"/>
+                        </StackPanel>
+
+                        <Expander Width="525">
+                            <ListView ItemsSource="{Binding actor}" Height="275" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Text="{Binding PrimaryName, StringFormat='Name: {0}'}" Style="{StaticResource Data_Text}"/>
+                                                <TextBlock Text="{Binding PrimaryProfession, StringFormat='Profession: {0}'}" Style="{StaticResource Data_Text}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Expander>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 </Page>

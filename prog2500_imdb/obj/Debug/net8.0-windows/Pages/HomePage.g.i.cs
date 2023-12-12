@@ -53,7 +53,7 @@ namespace prog2500_imdb.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/prog2500_imdb;component/pages/homepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/prog2500_imdb;V1.0.0.0;component/pages/homepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\HomePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\school\CurrentSemester\C#\Assignments\4 - Group project\prog2500_imdb\obj\Debug\net8.0-windows\
+D:\Documents\NSCC\OneDrive - Nova Scotia Community College\2023.03\PROG2500\Assignments\4\Project\prog2500_imdb\obj\Debug\net8.0-windows\
 prog2500_imdb
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\school\CurrentSemester\C#\Assignments\4 - Group project\prog2500_imdb\App.xaml
+D:\Documents\NSCC\OneDrive - Nova Scotia Community College\2023.03\PROG2500\Assignments\4\Project\prog2500_imdb\App.xaml
 51818009705
 
 17-24385520
-2261151960079
+2262084426317
 MainWindow.xaml;Pages\ActorPage.xaml;Pages\GenrePage.xaml;Pages\HomePage.xaml;Pages\MoviePage.xaml;
 
 False

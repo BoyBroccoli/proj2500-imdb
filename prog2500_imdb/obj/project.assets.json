@@ -4017,19 +4017,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nickv\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\school\\CurrentSemester\\C#\\Assignments\\4 - Group project\\prog2500_imdb\\prog2500_imdb.csproj",
+      "projectUniqueName": "D:\\Documents\\NSCC\\OneDrive - Nova Scotia Community College\\2023.03\\PROG2500\\Assignments\\4\\Project\\prog2500_imdb\\prog2500_imdb.csproj",
       "projectName": "prog2500_imdb",
-      "projectPath": "D:\\school\\CurrentSemester\\C#\\Assignments\\4 - Group project\\prog2500_imdb\\prog2500_imdb.csproj",
-      "packagesPath": "C:\\Users\\nickv\\.nuget\\packages\\",
-      "outputPath": "D:\\school\\CurrentSemester\\C#\\Assignments\\4 - Group project\\prog2500_imdb\\obj\\",
+      "projectPath": "D:\\Documents\\NSCC\\OneDrive - Nova Scotia Community College\\2023.03\\PROG2500\\Assignments\\4\\Project\\prog2500_imdb\\prog2500_imdb.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents\\NSCC\\OneDrive - Nova Scotia Community College\\2023.03\\PROG2500\\Assignments\\4\\Project\\prog2500_imdb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nickv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
