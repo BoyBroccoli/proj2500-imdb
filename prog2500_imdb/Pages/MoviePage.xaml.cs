@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using prog2500_imdb.Data;
+﻿using prog2500_imdb.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +38,8 @@ namespace prog2500_imdb.Pages
         {
             string searchTerm = moviesSearch.Text;
 
+            moviesListView.Items.Clear();
+
             if (searchTerm != null)
             {
 
@@ -47,13 +49,13 @@ namespace prog2500_imdb.Pages
                             select new
                             {
                                 title_index = title_group.Key,
+                                title_count = title_group.Count(),
                                 title = title_group.ToList()
                             };
+
                 moviesListView.ItemsSource = query.ToList();
 
             }
-
-
         }
     }
 }

@@ -1,12 +1,14 @@
 ﻿<Page x:Class="prog2500_imdb.Pages.MoviePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:prog2500_imdb.Pages"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MoviePage">
+
+
     <Page.Resources>
         <CollectionViewSource x:Key="moviesViewSource"/>
     </Page.Resources>
@@ -27,41 +29,34 @@
                       x:Name="moviesListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
 
-                            <StackPanel Orientation="Vertical">
-                                <!--Movie title, genre, average rating, release date-->
-                                <TextBlock Text="{Binding PrimaryTitle}"/>
-                                <TextBlock Text="{Binding StartYear}"/>
-                                <TextBlock Text="{Binding Rating}"/>
-                                <TextBlock Text="{Binding Genres}"/>
 
-                            </StackPanel>
 
-                            <Expander Header="View Movie Details:">
 
-                                <ListView ItemsSource="{Binding Names}">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate DataType="local:Invoices">
-                                            <StackPanel Orientation="Horizontal">
+                        <ListView ItemsSource="{Binding title}"
+                                     
+                                      ScrollViewer.CanContentScroll="True">
+                            <ListView.ItemTemplate>
+                                <DataTemplate DataType="local:Invoices">
+                                    <StackPanel Orientation="Horizontal">
 
-                                                <!--Expanding list: actors name, character they played-->
-                                                <TextBlock Text="{Binding PrimaryName}"/>
-                                                <TextBlock Text=" - "/>
-                                                <TextBlock Text="{Binding PrimaryProfession}"/>
 
-                                            </StackPanel>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
+                                        <TextBlock Text="{Binding PrimaryTitle}"/>
+                                        <TextBlock Text=" - "/>
+                                        <TextBlock Text="{Binding PrimaryProfession}"/>
 
-                            </Expander>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
 
-                        </StackPanel>
+
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </Border>
 
     </StackPanel>
+
+
 </Page>
